@@ -129,7 +129,7 @@ public class ViewfinderView2 extends View {
 
 		paint.setColor(resultBitmap != null ? resultColor : maskColor);
 		// 画出扫描框外面的阴影部分，共四个部分
-		canvas.drawRect(0, 0, width, rect.bottom, paint);
+		canvas.drawRect(0, 0, width, rect.top, paint);
 		canvas.drawRect(0, rect.top, rect.left, rect.bottom + 1, paint);
 		canvas.drawRect(rect.right + 1, rect.top, width, rect.bottom + 1, paint);
 		canvas.drawRect(0, rect.bottom + 1, width, height, paint);

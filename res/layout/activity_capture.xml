@@ -14,7 +14,7 @@
             android:layout_gravity="center" />
 
         <com.aoeng.zxing.qr.view.ViewfinderView2
-            android:id="@+id/viewfinder_view"
+            android:id="@+id/viewfinder_view2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
 
