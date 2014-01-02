@@ -83,7 +83,7 @@ public final class CameraManager {
 
 	private Parameters parameters;
 
-	private boolean is_flashlight = true;
+	private boolean is_flashlight = false;
 
 	private String flashMode;
 
@@ -154,17 +154,14 @@ public final class CameraManager {
 			}
 			configManager.setDesiredCameraParameters(camera);
 
-			// SharedPreferences prefs =
-			// PreferenceManager.getDefaultSharedPreferences(context);
-			// �Ƿ�ʹ��ǰ��
-			// if (prefs.getBoolean(PreferencesActivity.KEY_FRONT_LIGHT, false))
-			// {
-			// FlashlightManager.enableFlashlight();
-			// }
+			//闪光灯可用
 			FlashlightManager.enableFlashlight();
 		}
 
 		configManager.setDesiredCameraParameters(camera);
+		
+		//控制闪光灯开关
+		
 		parameters = camera.getParameters();
 		if (is_flashlight) {
 			flashMode = Camera.Parameters.FLASH_MODE_ON;
