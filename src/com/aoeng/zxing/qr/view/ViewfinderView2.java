@@ -118,9 +118,9 @@ public class ViewfinderView2 extends View {
 			return;
 		}
 		// 初始化中间线滑动的最上边和最下边
-		if (isFirst) {
+		if (!isFirst) {
 			isFirst = true;
-			slideTop = rect.top;
+			slideTop = rect.top + SPEEN_DISTANCE;
 			slideBottom = rect.bottom;
 		}
 		// 获取屏幕的宽和高
